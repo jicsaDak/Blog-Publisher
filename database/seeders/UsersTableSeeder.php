@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $user =  User::create([
+        $admin =  User::create([
             'name'            => 'Admin',
             'email'           => 'admin@example.com',
             'phone'           => '123456789',
@@ -26,6 +26,18 @@ class UsersTableSeeder extends Seeder
             'remember_token'  => Str::random(10),
         ]);
         $role = Role::find(1);
+        $admin->assignRole($role->name);
+        
+        $user =  User::create([
+            'name'            => 'User',
+            'email'           => 'user@example.com',
+            'phone'           => '123456789',
+            'status'          => 5,
+            'address'         => 'Dhaka, Bangladesh',
+            'password'        => bcrypt('123456'),
+            'remember_token'  => Str::random(10),
+        ]);
+        $role = Role::find(2);
         $user->assignRole($role->name);
     }
 }
