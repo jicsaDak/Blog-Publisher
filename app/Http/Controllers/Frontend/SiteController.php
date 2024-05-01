@@ -13,4 +13,5 @@ class SiteController extends FrontendController
     public function index(){
         return view('frontend.index');
     }
+   
 }

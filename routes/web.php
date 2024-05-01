@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Frontend\SiteController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use Illuminate\Support\Facades\Route;
@@ -15,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/ragistration', [UserController::class, 'ragistration'])->name('ragistration');
+Route::post('/ragistration/create', [UserController::class, 'create'])->name('ragistration');
+
 
 Route::get('/', [SiteController::class, 'index'])->name('index');
+
 
 
 Route::middleware(['auth', 'role:Admin'])->prefix('admin')->name('admin.')->group(function () {
