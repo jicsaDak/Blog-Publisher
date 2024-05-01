@@ -2,7 +2,7 @@
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="{{ url("index.html") }}">Groovin</a></h1>
+      <h1 class="logo"><a href="{{ url("index.html") }}">Blog Publisher</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="{{ url("index.html") }}" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -32,6 +32,8 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{{ url("#contact") }}">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{{ url("login") }}">Login</a></li>
+          <li><a class="nav-link scrollto" href="{{ url("ragistration") }}">Ragistration</a></li>
           <li><a class="getstarted scrollto" href="{{ url("#about") }}">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
